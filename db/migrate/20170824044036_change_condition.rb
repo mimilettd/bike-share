@@ -1,4 +1,4 @@
-class ChangeConditions < ActiveRecord::Migration[5.1]
+class ChangeCondition < ActiveRecord::Migration[5.1]
   def change
     change_table(:conditions) do |t|
       t.remove :max_dew_point_f
@@ -18,7 +18,7 @@ class ChangeConditions < ActiveRecord::Migration[5.1]
       t.remove :wind_dir_degrees
   end
 
-   change_table(:conditions) do |t|
+  change_table(:conditions) do |t|
       t.rename :max_temperature_f, :max_temperature
       t.rename :mean_temperature_f, :mean_temperature
       t.rename :min_temperature_f, :min_temperature
